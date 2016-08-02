@@ -34,15 +34,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages="org.khmeracademy.app")
-@PropertySource(
+/*@PropertySource(
 		value={"classpath:applications.properties"}
-)
+)*/
 public class KAWebConfiguraion extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	private Environment environment;
 	
-	@Override
+/*	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 		registry.addResourceHandler("/webjars/**").addResourceLocations("/resources/");
@@ -54,7 +54,7 @@ public class KAWebConfiguraion extends WebMvcConfigurerAdapter {
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
-	}
+	}*/
 	
 	@Bean
 	public HttpHeaders header(){
